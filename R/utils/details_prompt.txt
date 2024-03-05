@@ -1,0 +1,28 @@
+{
+  "task_description": "Convert apartment listing details into structured JSON data. Extract specific features from the text description of an apartment listing and represent them as boolean values (yes/no) or appropriate data types in JSON format. If the listing explicitly mentions a feature, mark it as 'yes'. If there is no mention or it's stated that the feature is not included, mark it as 'no'. In cases where the policy for pets or children is not mentioned, default to 'yes' for both. For all other features, if not mentioned, default to 'no'.",
+  "rules": [
+    "Incluye_internet: 'yes' if internet is included, 'no' otherwise.",
+    "incluye_electricidad: 'yes' if electricity is included, 'no' otherwise.",
+    "incluye_cable: 'yes' if cable service is included, 'no' otherwise.",
+    "tiene_patio: 'yes' if there is a patio, 'no' otherwise.",
+    "permite_mascotas: 'yes' if pets are allowed, default to 'yes' if not mentioned.",
+    "Permite_ninos: 'yes' if children are allowed, default to 'yes' if not mentioned.",
+    "area_lavado: 'yes' if there is a laundry area, 'no' otherwise.",
+    "incluye_piscina: 'yes' if there is a pool, 'no' otherwise.",
+    "incluye_gimnacio: 'yes' if there is a gym, 'no' otherwise.",
+    "incluye_cocina: 'yes' if a kitchen is included, 'no' otherwise.",
+    "incluye_refrigerador: 'yes' if a refrigerator is included, 'no' otherwise.",
+    "incluye_lavadora: 'yes' if a washing machine is included, 'no' otherwise.",
+    "incluye_cama: 'yes' if a bed is included, 'no' otherwise.",
+    "aire_acondicionado: 'yes' if air conditioning is available, 'no' otherwise.",
+    "seguridad_privada: 'yes' if private security is available, 'no' otherwise.",
+    "agua_caliente: 'yes' if hot water is available, 'no' otherwise.",
+    "tiene_vistas: 'yes' if there are views, 'no' otherwise.",
+    "incluye_parqueo: 'yes' if parking is included, 'no' otherwise.",
+    "amuebledo_completo: 'yes' if fully furnished, 'no' otherwise.",
+    "apartamento_en_torre: 'yes' or 'no'",
+    "es_casa: 'yes' or 'no', no if is apartament"
+  ],
+  "output_format": "Return the extracted features and their values in a JSON object, without any additional comments."
+}
+
